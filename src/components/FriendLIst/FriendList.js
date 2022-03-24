@@ -15,6 +15,7 @@ const FriendList = () => {
     let [specialFriend, setSpecialFriend] = useState([]);
 
     const showDetails = (id) => {
+        
         specialFriend = friends.find(friend => friend.id === id);
         setSpecialFriend(specialFriend);
     }

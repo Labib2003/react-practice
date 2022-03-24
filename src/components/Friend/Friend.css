@@ -1,5 +1,26 @@
 .friend{
+    height: 200px;
     background-color: bisque;
     border-radius: 10px;
     padding: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.more-details-btn{
+    border: none;
+    background-color: lime;
+    width: 100%;
+    padding: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.more-details-btn:hover{
+    border: none;
+    padding: 10px;
+    background-color: orange;
+    transition: all .1s ease-in-out;
+    
 }

@@ -9,7 +9,7 @@ const Friend = (props) => {
             <p>Username: {username}</p>
             <p>Email: {email}</p>
             <p>Address: {address.suite}, {address.street}, {address.city}</p>
-            <button onClick={() => showDetails(id)}>More details</button>
+            <button className='more-details-btn' onClick={() => showDetails(id)}>More details</button>
         </div>
     );
 };

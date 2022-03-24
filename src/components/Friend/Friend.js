@@ -2,13 +2,14 @@ import React from 'react';
 import './Friend.css'
 
 const Friend = (props) => {
-    const {name, email, address} = props.friend;
+    const {username, email, address, id} = props.friend;
+    const {showDetails} = props;
     return (
         <div className='friend'>
-            <p>Username: {name}</p>
+            <p>Username: {username}</p>
             <p>Email: {email}</p>
             <p>Address: {address.suite}, {address.street}, {address.city}</p>
-            <button>More details</button>
+            <button onClick={() => showDetails(id)}>More details</button>
         </div>
     );
 };

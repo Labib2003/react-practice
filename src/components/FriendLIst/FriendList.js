@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Friend from '../Friend/Friend';
+import SpecialFriend from '../SpecialFriend/SpecialFriend';
 import './FriendList.css'
 
 const FriendList = () => {
@@ -11,10 +12,11 @@ const FriendList = () => {
             .then(data => setFriends(data));
     }, []);
 
+    let [specialFriend, setSpecialFriend] = useState([]);
+
     const showDetails = (id) => {
-        const specialFriend = friends.find(friend => friend.id === id);
-        console.log(specialFriend);
-        return specialFriend;
+        specialFriend = friends.find(friend => friend.id === id);
+        setSpecialFriend(specialFriend);
     }
 
     return (
@@ -26,7 +28,7 @@ const FriendList = () => {
                 }
             </div>
             <div className='friend-details'>
-                Details
+                <SpecialFriend specialFriend={specialFriend}></SpecialFriend>
             </div>
         </div>
     );

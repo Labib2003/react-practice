@@ -1,10 +1,11 @@
 .friend{
-    height: 200px;
+    height: 130px;
     background-color: bisque;
     border-radius: 10px;
     padding: 5px;
     position: relative;
     overflow: hidden;
+    box-shadow: 0 0 1px 0.5px rgba(0, 0, 0, 0.200);
 }
 
 .more-details-btn{

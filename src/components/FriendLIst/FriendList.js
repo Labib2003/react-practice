@@ -14,11 +14,17 @@ const FriendList = () => {
 
     let [specialFriend, setSpecialFriend] = useState([]);
 
+    const [specialFriendStyle, setSpecialFriendStyle] = useState({ display: 'none' });
+
     const showDetails = (id) => {
-        
         specialFriend = friends.find(friend => friend.id === id);
         setSpecialFriend(specialFriend);
+        if (specialFriend !== []) {
+            setSpecialFriendStyle({ display: 'block' });
+        }
     }
+
+
 
     return (
         <div>
@@ -28,7 +34,7 @@ const FriendList = () => {
                     friends.map(friend => <Friend key={friend.id} showDetails={showDetails} friend={friend}></Friend>)
                 }
             </div>
-            <div className='friend-details'>
+            <div style={specialFriendStyle} className='friend-details'>
                 <SpecialFriend specialFriend={specialFriend}></SpecialFriend>
             </div>
         </div>
